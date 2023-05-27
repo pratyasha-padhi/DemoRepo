@@ -13,9 +13,6 @@ import BaseClass.BasePage;
 
 public class ContactPage extends BasePage {
 
-	@FindBy(xpath = "//strong[text()='We welcome your feedback']")
-	WebElement contactpagevalidation;
-
 	@FindBy(xpath = "//a[contains(@class,'btn-contact')]")
 	WebElement SubmitBtn;
 
@@ -45,6 +42,7 @@ public class ContactPage extends BasePage {
 		PageFactory.initElements(driver, this);
 
 	}
+	
 
 	public void clickonsubmit() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -53,11 +51,7 @@ public class ContactPage extends BasePage {
 
 	}
 
-	public boolean page_validation() throws InterruptedException {
-		Thread.sleep(2000);
-		boolean text = contactpagevalidation.isDisplayed();
-		return text;
-	}
+	
 
 	public String ForenameError_gettext() {
 		String Forename = ForenameError.getText();
@@ -102,7 +96,6 @@ public class ContactPage extends BasePage {
 	public boolean msgerror_display() {
 		boolean msgerror = MessageError.isDisplayed();
 		return msgerror;
-		
 	}
 
 	public String SuccessMsg_actualtext() {

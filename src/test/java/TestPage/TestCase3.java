@@ -3,6 +3,7 @@ package TestPage;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -33,6 +34,9 @@ public class TestCase3 {
 	public void addtocart() {
 		shopPage = new ShopPage(driver);
 		shopPage.click_Shop();
+		String title = driver.getTitle();
+		Assert.assertEquals(title, "Jupiter Toys");
+		System.out.println("User is in Shop page");
 		shopPage.buystuffs();
 		System.out.println("products are added to cart");
 		shopPage.click_Cart();

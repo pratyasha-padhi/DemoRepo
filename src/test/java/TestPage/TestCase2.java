@@ -35,17 +35,17 @@ public class TestCase2 {
 		homePage.click_contact();
 //	Assert.assertTrue(contactPage.page_validation());
 		System.out.println("User is in contact page");
+		Thread.sleep(5000);
 
 		contactPage = new ContactPage(driver);
 		contactPage.createNewContact("Pratyasha", "pratyasha.padhi@gmail.com", "Test Message");
 		System.out.println("Populated mandatory fields");
 		contactPage.clickonsubmit();
-		Thread.sleep(7000);
+		Thread.sleep(10000);
 		String successmsg_expected = "Thanks Pratyasha";
 		Assert.assertEquals(successmsg_expected, contactPage.SuccessMsg_actualtext());
 		System.out.println("Success messgage is verified ");
-		Thread.sleep(5000);
-		homePage.click_contact();
+	//	homePage.click_contact();
 
 
 	}

@@ -26,10 +26,15 @@ public class BasePage {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
+		
 	driver.manage().window().maximize();
+	driver.manage().deleteAllCookies();
+
 	driver.manage().timeouts().pageLoadTimeout(Integer.parseInt(prop.getProperty("pageloadtimeout")),
 			TimeUnit.SECONDS);
-	driver.manage().deleteAllCookies();
+	driver.manage().timeouts().implicitlyWait(Integer.parseInt(prop.getProperty("implicitwait")),
+			TimeUnit.SECONDS);
+		
 	return driver;
 	}
 	public Properties init_properties() {

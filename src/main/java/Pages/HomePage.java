@@ -16,16 +16,25 @@ public class HomePage extends BasePage {
 	@FindBy(xpath= "//*[text()='Contact']")
 	WebElement ContactPage;
 	
+	@FindBy(xpath= "//img[@src=\"images/logo.png\"]")
+	WebElement brandlogo;
+	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		}
+	public boolean verifylogo() {
+		boolean logo= brandlogo.isDisplayed();
+		return logo;
+	}
 	public void click_contact() {
+		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(ContactPage));
 		ContactPage.click();
 	
 	}
+	
 
 	
 	

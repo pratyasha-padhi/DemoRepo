@@ -1,7 +1,7 @@
 package TestPage;
 
 import java.util.Properties;
-
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -19,6 +19,7 @@ public class TestCase1 {
 	public Properties prop;
 	public HomePage homePage;
 	public ContactPage contactPage;
+
 	String forenameerror_expected = "Forename is required";
 	String emailerror_expected = "Email is required";
 	String msgerror_expected = "Message is required";
@@ -29,15 +30,21 @@ public class TestCase1 {
 		prop = basePage.init_properties();
 		driver = basePage.init_driver("chrome");
 		driver.get(prop.getProperty("url"));
+		
 
 	}
 
 	@Test(priority = 1)
 	public void goto_contactpage() throws InterruptedException {
 		homePage = new HomePage(driver);
+		Assert.assertTrue(homePage.verifylogo());
+		System.out.println("Brand logo populates on the header");
 		homePage.click_contact();
-//		Assert.assertTrue(contactPage.page_validation());
+		Thread.sleep(2000);
+		String title = driver.getTitle();
+		Assert.assertEquals(title, "Jupiter Toys");
 		System.out.println("User is in contact page");
+		
 	}
 
 	@Test(priority = 2)

@@ -1,25 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-27T02:15:22 IST" name="Default suite" finished-at="2023-05-27T02:15:48 IST" duration-ms="26478">
+  <suite started-at="2023-05-27T14:58:10 IST" name="Suite" finished-at="2023-05-27T14:59:10 IST" duration-ms="60042">
     <groups>
     </groups>
-    <test started-at="2023-05-27T02:15:22 IST" name="Default test" finished-at="2023-05-27T02:15:48 IST" duration-ms="26478">
-      <class name="TestPage.TestCase2">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:TestPage.TestCase2@1b1426f4]" started-at="2023-05-27T02:15:22 IST" name="setUp" finished-at="2023-05-27T02:15:29 IST" duration-ms="7307" status="PASS">
+    <test started-at="2023-05-27T14:58:10 IST" name="Test" finished-at="2023-05-27T14:59:10 IST" duration-ms="60042">
+      <class name="TestPage.TestCase1">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestPage.TestCase1@71def8f8]" started-at="2023-05-27T14:58:10 IST" name="setUp" finished-at="2023-05-27T14:58:14 IST" duration-ms="4255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verify_successmsg()[pri:0, instance:TestPage.TestCase2@1b1426f4]" started-at="2023-05-27T02:15:29 IST" name="verify_successmsg" finished-at="2023-05-27T02:15:48 IST" duration-ms="18977" status="PASS">
+        <test-method signature="goto_contactpage()[pri:1, instance:TestPage.TestCase1@71def8f8]" started-at="2023-05-27T14:58:14 IST" name="goto_contactpage" finished-at="2023-05-27T14:58:16 IST" duration-ms="2164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goto_contactpage -->
+        <test-method signature="click_submit()[pri:2, instance:TestPage.TestCase1@71def8f8]" started-at="2023-05-27T14:58:16 IST" name="click_submit" finished-at="2023-05-27T14:58:17 IST" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_submit -->
+        <test-method signature="errormsg_validation()[pri:3, instance:TestPage.TestCase1@71def8f8]" started-at="2023-05-27T14:58:17 IST" name="errormsg_validation" finished-at="2023-05-27T14:58:17 IST" duration-ms="55" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- errormsg_validation -->
+        <test-method signature="errormsg_gone()[pri:4, instance:TestPage.TestCase1@71def8f8]" started-at="2023-05-27T14:58:17 IST" name="errormsg_gone" finished-at="2023-05-27T14:58:32 IST" duration-ms="15277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- errormsg_gone -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPage.TestCase1@71def8f8]" started-at="2023-05-27T14:58:32 IST" name="tearDown" finished-at="2023-05-27T14:58:32 IST" duration-ms="128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestPage.TestCase1 -->
+      <class name="TestPage.TestCase2">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestPage.TestCase2@73e22a3d]" started-at="2023-05-27T14:58:32 IST" name="setUp" finished-at="2023-05-27T14:58:36 IST" duration-ms="3557" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verify_successmsg()[pri:0, instance:TestPage.TestCase2@73e22a3d]" started-at="2023-05-27T14:58:36 IST" name="verify_successmsg" finished-at="2023-05-27T14:58:51 IST" duration-ms="15424" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_successmsg -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPage.TestCase2@1b1426f4]" started-at="2023-05-27T02:15:48 IST" name="tearDown" finished-at="2023-05-27T02:15:48 IST" duration-ms="169" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPage.TestCase2@73e22a3d]" started-at="2023-05-27T14:58:51 IST" name="tearDown" finished-at="2023-05-27T14:58:51 IST" duration-ms="128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestPage.TestCase2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="TestPage.TestCase3">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestPage.TestCase3@47faa49c]" started-at="2023-05-27T14:58:51 IST" name="setUp" finished-at="2023-05-27T14:58:55 IST" duration-ms="3519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addtocart()[pri:1, instance:TestPage.TestCase3@47faa49c]" started-at="2023-05-27T14:58:55 IST" name="addtocart" finished-at="2023-05-27T14:58:56 IST" duration-ms="901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addtocart -->
+        <test-method signature="subtotal()[pri:2, instance:TestPage.TestCase3@47faa49c]" started-at="2023-05-27T14:58:56 IST" name="subtotal" finished-at="2023-05-27T14:59:04 IST" duration-ms="8178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subtotal -->
+        <test-method signature="price_verification()[pri:3, instance:TestPage.TestCase3@47faa49c]" started-at="2023-05-27T14:59:04 IST" name="price_verification" finished-at="2023-05-27T14:59:07 IST" duration-ms="3184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- price_verification -->
+        <test-method signature="totalprice_verification()[pri:4, instance:TestPage.TestCase3@47faa49c]" started-at="2023-05-27T14:59:07 IST" name="totalprice_verification" finished-at="2023-05-27T14:59:10 IST" duration-ms="3037" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- totalprice_verification -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestPage.TestCase3@47faa49c]" started-at="2023-05-27T14:59:10 IST" name="tearDown" finished-at="2023-05-27T14:59:10 IST" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestPage.TestCase3 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
