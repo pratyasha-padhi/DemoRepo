@@ -26,13 +26,13 @@ public class ContactPage extends BasePage {
 	WebElement MessageError;
 
 	@FindBy(id = "forename")
-	WebElement ForenameBtn;
+	WebElement ForenameTextbox;
 
 	@FindBy(name = "email")
-	WebElement EmailBtn;
+	WebElement EmailTextbox;
 
 	@FindBy(name = "message")
-	WebElement MessageBtn;
+	WebElement MessageTextbox;
 
 	@FindBy(xpath = "//strong[text()='Thanks Pratyasha']")
 	WebElement SuccessMsg;
@@ -71,14 +71,14 @@ public class ContactPage extends BasePage {
 	public void createNewContact(String Forename, String Email, String Message) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-		wait.until(ExpectedConditions.elementToBeClickable(ForenameBtn));
-		ForenameBtn.sendKeys(Forename);
+		wait.until(ExpectedConditions.visibilityOf(ForenameTextbox));
+		ForenameTextbox.sendKeys(Forename);
 
-		wait.until(ExpectedConditions.elementToBeClickable(EmailBtn));
-		EmailBtn.sendKeys(Email);
+		wait.until(ExpectedConditions.visibilityOf(EmailTextbox));
+		EmailTextbox.sendKeys(Email);
 
-		wait.until(ExpectedConditions.elementToBeClickable(MessageBtn));
-		MessageBtn.sendKeys(Message);
+		wait.until(ExpectedConditions.visibilityOf(MessageTextbox));
+		MessageTextbox.sendKeys(Message);
 
 	}
 
